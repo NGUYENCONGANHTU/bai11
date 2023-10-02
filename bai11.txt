@@ -1,0 +1,330 @@
+#include "stdio.h"
+
+//int main()
+//{
+//    float w,h, BMI;
+//    printf("w=");
+//    scanf("%f", &w);
+//    printf("h=");
+//    scanf("%f", &h);
+//    BMI=w/(h*h);
+//    printf("BMI= %f \n",BMI);
+//    if(BMI<=18)
+//    {
+//        printf("Gay");
+//    }
+//    else if(BMI>18 && BMI<=24.9)
+//    {
+//        printf("oke");
+//    }
+//    else if(BMI>24.9 && BMI<=29.9)
+//    {
+//        printf("beo");
+//    } else
+//    {
+//        printf("Beo phi\n");
+//    }
+//    return 0;
+//}
+// for
+/*int main (){
+    int i;
+    for(i=0;i<10;i++)
+    {
+        printf("\n  %d",i);
+    }
+}*/
+//while
+/*
+int main ()
+{
+    int i;
+    while(i<10)
+    {
+        printf("\n %d",i);
+        i++;
+    }
+}
+*/
+/*
+int main()
+{
+    int i;
+    do {
+        printf("i=%d \n ", i);
+        i++;
+        }while(i<10);
+    }
+*/
+/*#include <stdio.h>
+
+int main ()
+{
+    char ans;
+    do{
+        printf("em co muon lam cuc cung cua anh khong???\n");
+        scanf(" %c",&ans);
+        if(ans=='y'|| ans=='Y')
+        {
+            printf("oke baby:");
+        }else   {
+            printf("dmm cutttt \n");
+        }
+
+      }while (ans!='y'&& ans!='Y');
+    return 0;
+
+}*/
+#include <stdio.h>
+
+/*
+int main() {
+    char answer;
+
+    do {
+        printf("Crush oi , em co yeu anh khong? (y/n): ");
+        scanf(" %c", &answer);
+
+        if (answer == 'y' || answer == 'Y') {
+            printf("Oh,vay la em ko yeu anh a!\n");
+        } else {
+            printf("tao se doi may!\n");
+        }
+    } while (answer != 'y' && answer != 'Y');
+
+    return 0;
+}*/
+
+
+/*
+#include <stdio.h>
+int main() {
+    char sub[50], ans;
+    int diem, avg;
+
+    do {
+        printf("Nhap ten mon hoc: ");
+        scanf("%s", sub);
+        printf("Nhap diem: ");
+        scanf("%d", &diem);
+        printf("Ban co muon tiep tuc khong? (y/n): ");
+        scanf(" %c", &ans);
+        if (ans == 'y' || ans == 'Y') {
+            continue;
+        }
+        else {
+            avg = (diem + diem + diem) / 3;
+            printf("Diem trung binh cua ban la: %d\n", avg);
+        }
+    } while (ans != 'y' || ans != 'Y');
+
+    return 0;
+}
+
+*/
+/*
+int main()
+{
+    int count = 0;
+    float total = 0;
+    char choice;
+    char subject[50];
+    float score;
+
+    do {
+        printf("nhap ten mon hoc: ");
+        scanf("%s", subject);
+        printf("Nhap diem: ");
+        scanf("%f", &score);
+        total += score;
+        count++;
+        printf("Ban co muon tip tuc khong: ");
+        scanf(" %c", &choice);
+
+    } while (choice =='y' || choice =='Y');
+    if(count>0)
+    {
+        double average = total/count;
+        printf("deim trung binh la: %.2lf \n", average);
+    } else
+    {
+        printf("khong co mon hoc nao duoc nhap diem. \n");
+    }
+    return 0;
+}
+*/
+
+//*
+
+
+
+//----------------Mảng--------------------//
+#include <stdio.h>
+
+/*int main ()
+{
+    int a[6];
+    for (int i = 0; i < 6; i++) {
+        printf("nhap phan tu thu %d", i+1);
+        scanf("%d", &a[i]);
+    }
+    return 0;
+}*/
+// ví dụ 1
+int main ()
+{
+    int num[5];
+    int max=num[0];
+    int total = 0;
+    for (int i = 0; i < 5; i++)
+    {
+        printf("num[%d]:", i);
+        scanf("%d", &num[i]);
+        total += num[i];
+        if( max<num[i])
+        {
+            max=num[i];
+        }
+    }
+
+    printf("max=%d \n", max);
+    printf("total=%d", total);
+    return 0;
+}
+
+/*#include <stdio.h>
+
+int main() {
+    int num[5];
+    int max = 0;
+
+    for (int i = 0; i < 5; i++) {
+        printf("num[%d]: ", i);
+        scanf("%d", &num[i]);
+
+        if (max < num[i]) {
+            max = num[i];
+        }
+    }
+
+    printf("max = %d\n", max);
+
+    return 0;
+}*/
+// ví dụ 2
+/*int main () {
+    int a[10];
+    int i, total, high;
+    for (i = 0; i < 10; i++) {
+        printf("Nhap phan tu thu %d:", i + 1);
+        scanf("%d", &a[i]);
+    }
+    return 0;
+}*/
+// ví dụ 3:
+ /*int main()
+{
+    char alpha[26];
+    int i,j;
+    for (i=65,j=0;i < 91;i++,j++)
+    {
+        alpha[j]=i;
+        printf("the character now assigned is %c \n", alpha[i]);
+    }
+    getchar();
+
+
+}*/
+
+/*
+int main ()
+{
+    char a[5];
+    int i   ;
+    printf("enter string: " );
+    scanf("%s", &a);
+    printf("\n The string is %s \n\n", a);
+    for (int i = 0; i < 5; i++) {
+        printf("\t %d", a[i]);
+    }
+}*/
+/*
+int main () {
+    int arr[2][3];
+    int row, col;
+    for (row = 0; row < 2; row++) {
+        for (col = 0; col < 3; col++) {
+            printf("\n Enter a Number at [%d][%d]: ", row, col);
+            scanf("%d", &arr[row][col]);
+        }
+    }
+    for (int row = 0; row < 2; row++) {
+        for (int col = 0; col < 3; col++) {
+            printf("\n The number at [%d][%d] is %d", row, col, arr[row][col]);
+            scanf("%d", &arr[row][col]);
+        }
+    }
+
+}*/
+/*
+ ()
+{
+   int i, n= 0;
+   int item;
+   char x[10][12];
+   char temp[12];
+    printf("Enter each string on a separate line \n\n");
+    printf("Type 'END' when over \n\n");
+    do
+    {
+    printf()
+    }
+}
+*/
+
+/*int main()
+{
+    int a[7]={65,63,58,69,30,15,25};
+    int max= a[0];
+    int min= a[0];
+    for (int i = 1; i < 7; i++) {
+        if( min > a[i] )
+        {
+            min = a[i];
+        }
+    }
+    printf("%d", min);
+}*/
+/*
+int main()
+{
+    int a[5]={65,58,25,14,36};
+    int max=a[0];
+    int min=a[0];
+    for (int i = 1; i <5 ; i++) {
+        if(max<a[i]) {
+            max = a[i];
+        }
+    }
+    printf("max= %d  ", max);
+    for (int i = 1; i <5 ; i++) {
+        if(min>a[i]) {
+            min = a[i];
+        }
+    }
+    printf("min= %d  ", min);
+}
+*/
+/*
+int main ()
+{
+    int a[5]= {45,65,69,45,75};
+    int max= a[0];
+    for (int i = 1  ; i < 5 ; i++) {
+        if(max<a[i]){
+            max=a[i];
+        }
+    }
+    printf("max = %d", max);
+}
+*/
